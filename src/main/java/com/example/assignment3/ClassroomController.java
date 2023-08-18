@@ -7,7 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
-public class ClassroomController {
+public
+class ClassroomController {
 
     @FXML
     private Pane col1row1;
@@ -69,55 +70,56 @@ public class ClassroomController {
     @FXML
     private TextField studentName;
 
-    private static final ClassroomModel MODEL = new ClassroomModel();;
+    private static final ClassroomModel MODEL = new ClassroomModel ();
+    ;
 
     @FXML
     void addStudent(ActionEvent event) {
         try {
-            String placement = MODEL.findSeat(studentName.getText(), seatColour.getValue().toString());
+            String placement = MODEL.findSeat (studentName.getText (), seatColour.getValue ().toString ());
 
             switch (placement) {            // Use the random seat from ClassroomModel to find the available seat at that index
                 case "col1row1" -> {        // Assign the student to the random seat in the seats array
-                    col1row1.setStyle("-fx-background-color: #" + seatColour.getValue().toString().substring(2));
-                    col1row1Label.setText(studentName.getText());
+                    col1row1.setStyle ("-fx-background-color: #" + seatColour.getValue ().toString ().substring (2));
+                    col1row1Label.setText (studentName.getText ());
                 }
                 case "col2row1" -> {
-                    col2row1.setStyle("-fx-background-color: #" + seatColour.getValue().toString().substring(2));
-                    col2row1Label.setText(studentName.getText());
+                    col2row1.setStyle ("-fx-background-color: #" + seatColour.getValue ().toString ().substring (2));
+                    col2row1Label.setText (studentName.getText ());
                 }
                 case "col3row1" -> {
-                    col3row1.setStyle("-fx-background-color: #" + seatColour.getValue().toString().substring(2));
-                    col3row1Label.setText(studentName.getText());
+                    col3row1.setStyle ("-fx-background-color: #" + seatColour.getValue ().toString ().substring (2));
+                    col3row1Label.setText (studentName.getText ());
                 }
                 case "col1row2" -> {
-                    col1row2.setStyle("-fx-background-color: #" + seatColour.getValue().toString().substring(2));
-                    col1row2Label.setText(studentName.getText());
+                    col1row2.setStyle ("-fx-background-color: #" + seatColour.getValue ().toString ().substring (2));
+                    col1row2Label.setText (studentName.getText ());
                 }
                 case "col2row2" -> {
-                    col2row2.setStyle("-fx-background-color: #" + seatColour.getValue().toString().substring(2));
-                    col2row2Label.setText(studentName.getText());
+                    col2row2.setStyle ("-fx-background-color: #" + seatColour.getValue ().toString ().substring (2));
+                    col2row2Label.setText (studentName.getText ());
                 }
                 case "col3row2" -> {
-                    col3row2.setStyle("-fx-background-color: #" + seatColour.getValue().toString().substring(2));
-                    col3row2Label.setText(studentName.getText());
+                    col3row2.setStyle ("-fx-background-color: #" + seatColour.getValue ().toString ().substring (2));
+                    col3row2Label.setText (studentName.getText ());
                 }
                 case "col1row3" -> {
-                    col1row3.setStyle("-fx-background-color: #" + seatColour.getValue().toString().substring(2));
-                    col1row3Label.setText(studentName.getText());
+                    col1row3.setStyle ("-fx-background-color: #" + seatColour.getValue ().toString ().substring (2));
+                    col1row3Label.setText (studentName.getText ());
                 }
                 case "col2row3" -> {
-                    col2row3.setStyle("-fx-background-color: #" + seatColour.getValue().toString().substring(2));
-                    col2row3Label.setText(studentName.getText());
+                    col2row3.setStyle ("-fx-background-color: #" + seatColour.getValue ().toString ().substring (2));
+                    col2row3Label.setText (studentName.getText ());
                 }
                 case "col3row3" -> {
-                    col3row3.setStyle("-fx-background-color: #" + seatColour.getValue().toString().substring(2));
-                    col3row3Label.setText(studentName.getText());
+                    col3row3.setStyle ("-fx-background-color: #" + seatColour.getValue ().toString ().substring (2));
+                    col3row3Label.setText (studentName.getText ());
                 }
             }
         }
         // Alert the user of an errors that were thrown, if any
-        catch (Exception e){
-            Utilities.createErrorAlert(e.getMessage()).show();
+        catch (Exception e) {
+            Utilities.createErrorAlert (e.getMessage ()).show ();
         }
     }
 }
