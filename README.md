@@ -11,3 +11,6 @@ An intractable application with a graphical interface that takes a student name,
 • Colours cannot be used more than once
 
 • White (#FFFFFF) indicates an untaken seat, and cannot be used to place a student
+
+
+**DEMO:** https://www.youtube.com/watch?v=Uo60rky1Y1A
